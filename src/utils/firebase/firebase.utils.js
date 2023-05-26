@@ -21,6 +21,7 @@ const firebaseConfig = {
   measurementId: "G-196438HXHH"
 }
 
+// eslint-disable-next-line no-unused-vars
 const firebaseApp = initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
@@ -82,3 +83,13 @@ export const signOutUser = async () => await signOut(auth);
 
 export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback)
+
+
+/*
+How unsubscribe works
+{
+  next: callback,
+  error: errorCallback
+  complete: completedCallback
+}
+*/
